@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 11</title>
+  </head>
+  <body>
+    <h3>Задача 11.</h3>
+    <p>
+      Знайти суму 5 непарних чисел, що знаходяться між заданими користувачем
+      числами.
+    </p>
+    <h3>SOLUTION</h3>
+
+    <script>
+      const minLoopNum = parseInt(
+        prompt("Enter the first number in the loop:", "")
+      );
+      const maxLoopNum = parseInt(
+        prompt("Enter the last number in the loop:", "")
+      );
+      let totalAmount = 0,
+        oddNumCount = 0;
+
+      for (
+        let counter = minLoopNum;
+        counter <= maxLoopNum && oddNumCount < 5;
+        counter++
+      ) {
+        if (counter % 2 != 0) {
+          totalAmount += counter;
+          oddNumCount++;
+        }
+      }
+      document.write(`The total sum of the 5 odd numbers is ${totalAmount}.`);
+    </script>
+  </body>
+</html>

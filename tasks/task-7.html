@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 7</title>
+    <style>
+      img {
+        max-width: 20%;
+      }
+      .title {
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Задача 7.</h3>
+    <p>Вивести на екран N абзаців (N вводиться користувачем) за зразком:</p>
+    <img src="images/task-7-example.png" alt="image" />
+
+    <h3>SOLUTION</h3>
+    <script>
+      const titleNum = parseInt(prompt("Enter the number of titles:", ""));
+      const paragraphNum = parseInt(
+        prompt("Enter the number of Paragraphs:", "")
+      );
+      for (let i = 1; i <= titleNum; i++) {
+        document.write(`<div><h1> Title ${i}</h1>`);
+        for (let j = 1; j <= paragraphNum; j++) {
+          document.write(`<p>Chapter ${i}, Paragraph ${j}</p>`);
+        }
+        document.write(`</div> <hr>`);
+      }
+    </script>
+  </body>
+</html>

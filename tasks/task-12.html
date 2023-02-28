@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 12</title>
+    <style>
+      .container {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Задача 12.</h3>
+    <p>
+      Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у
+      кожній позиції вибирається як одне з чотирьох зображень. Вивести ці
+      зображення і повідомити виграш користувача (три перших зображення 100 грн,
+      три других – 200, три третіх – 500, три четвертих зображення – 1000грн).
+      Використати цикли і switch (для вибору зображення за номером).
+    </p>
+    <h3>SOLUTION</h3>
+    
+    <script>
+      let lemonCounter = 0,
+        cherryCounter = 0,
+        pineappleCounter = 0;
+      watermelonCounter = 0;
+
+      document.write('<div class="container">')
+
+      for (let i = 1; i <= 3; i++) {
+        let randomPicture = Math.floor(Math.random() * 4 + 1);
+        switch (randomPicture) {
+          case 1:
+            lemonCounter++;
+            document.write('<img src="./images/lemon.png" alt="lemon">');
+            break
+          case 2:
+            cherryCounter++;
+            document.write('<img src="./images/cherry.png" alt="cherry">');
+            break
+          case 3:
+            pineappleCounter++;
+            document.write(
+              '<img src="./images/pineapple.png" alt="pineapple">'
+            );
+            break
+          case 4:
+            watermelonCounter++;
+            document.write('<img src="./images/watermelon.png" alt="lemon">');
+            break
+        }
+      }
+      document.write('</div>')
+
+      if (lemonCounter === 3)
+      document.write("You won a 100 UAH!")
+      else if (cherryCounter === 3)
+      document.write("You won 200 UAH!")
+      else if (pineappleCounter === 3)
+      document.write("You won 500 UAH!")
+      else if (watermelonCounter === 3)
+      document.write("You won 1000 UAH!")
+      else 
+      document.write("You've lost.")
+    </script>
+    <div>
+  </body>
+</html>

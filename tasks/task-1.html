@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <style>
+      img {
+        size: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Задача 1.</h3>
+    <p>
+      Вивести з використанням циклів маркований список з випадковими числами
+      (1-100).<br />Кількість випадкових чисел вводиться користувачем. Приклад:
+    </p>
+    <ul>
+      <li>12</li>
+      <li>21</li>
+      <li>34</li>
+      <li>51</li>
+    </ul>
+
+    <h3>SOLUTION</h3>
+    <script>
+      //0. Name Variables
+      let minNum = 1;
+      let maxNum = 100;
+      const randomNumQuantity = parseInt(
+        prompt("How many random numbers do you want to see?", "")
+      );
+      let randomNumbers = "";
+
+      //1. Initialization
+      for (let i = 1; i < randomNumQuantity; i++) {
+        const randomNum = Math.floor(minNum + Math.random() * maxNum);
+        randomNumbers += `<ul><li>${randomNum}</li></ul>`;
+      }
+
+      //2. display in console
+      document.write(`
+      <ul>
+        <li>${randomNumbers}</li>
+        </ul>`);
+    </script>
+  </body>
+</html>
